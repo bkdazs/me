@@ -39,29 +39,18 @@
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Google Fonts - Non-blocking -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <!-- Critical CSS -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link href="vendor/css/bundle.min.css" rel="stylesheet">
     <link href="personal/css/style.css" rel="stylesheet">
-    <!-- Non-critical CSS - Deferred (only what's actually used) -->
-    <link href="vendor/css/LineIcons.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="vendor/css/jquery.fancybox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="vendor/css/owl.carousel.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="vendor/css/cubeportfolio.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="personal/css/page-animation.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="personal/css/responsive-fixes.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="personal/css/design-enhancements.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-        <link href="vendor/css/LineIcons.min.css" rel="stylesheet">
-        <link href="vendor/css/jquery.fancybox.min.css" rel="stylesheet">
-        <link href="vendor/css/owl.carousel.min.css" rel="stylesheet">
-        <link href="vendor/css/cubeportfolio.min.css" rel="stylesheet">
-        <link href="personal/css/page-animation.css" rel="stylesheet">
-        <link href="personal/css/responsive-fixes.css" rel="stylesheet">
-        <link href="personal/css/design-enhancements.css" rel="stylesheet">
-    </noscript>
+    <link href="vendor/css/LineIcons.min.css" rel="stylesheet">
+    <link href="vendor/css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="vendor/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="vendor/css/cubeportfolio.min.css" rel="stylesheet">
+    <link href="personal/css/page-animation.css" rel="stylesheet">
+    <link href="personal/css/responsive-fixes.css" rel="stylesheet">
+    <link href="personal/css/design-enhancements.css" rel="stylesheet">
     
     <!-- JSON-LD Schema Markup -->
     <script type="application/ld+json">
@@ -354,7 +343,10 @@
                             <!-- Image Area -->
                             <div class="col-lg-7 order-lg-2">
                                 <div class="slider-image">
-                                    <img src="personal/img/girl.png" alt="Bijay Das - AI Engineer Profile" width="500" height="600" loading="eager">
+                                    <picture>
+                                        <source srcset="personal/img/girl.webp" type="image/webp">
+                                        <img src="personal/img/girl.png" alt="Bijay Das - AI Engineer Profile" width="500" height="600" loading="eager">
+                                    </picture>
                                 </div>
                             </div>
 
@@ -1330,7 +1322,7 @@
                                         <p>"Bijay built our entire GenAI chatbot platform from scratch—architecture, backend, AI integration, deployment. Serving 150M users monthly with 99.95% uptime. Delivered in 10 weeks. Exactly what we needed."</p>
 
                                         <div class="client-img">
-                                            <img src="personal/img/avatar-1.png" alt="Product Manager Testimonial">
+                                            <img src="personal/img/avatar-1.png" alt="Product Manager Testimonial" width="80" height="80" loading="lazy">
                                         </div>
                                         <h5 class="client-name mb-0">Priya Sharma</h5>
                                         <span class="client-designation">Product Lead, Consumer Tech</span>
@@ -1342,7 +1334,7 @@
                                         <p>"Hired Bijay to migrate our legacy monolith to microservices on AWS. He designed the architecture, led the migration, set up CI/CD, trained the team. 40% cost reduction, zero downtime. Worth every penny."</p>
 
                                         <div class="client-img">
-                                            <img src="personal/img/avatar-2.png" alt="CTO Testimonial">
+                                            <img src="personal/img/avatar-2.png" alt="CTO Testimonial" width="80" height="80" loading="lazy">
                                         </div>
                                         <h5 class="client-name mb-0">Rajesh Kumar</h5>
                                         <span class="client-designation">CTO, Fintech Startup</span>
@@ -1354,7 +1346,7 @@
                                         <p>"Brought Bijay in as fractional CTO when we were scaling from 5 to 25 engineers. He hired the team, set up engineering processes, and fixed our architectural debt. Still consulting with us after 18 months."</p>
 
                                         <div class="client-img">
-                                            <img src="personal/img/avatar-3.png" alt="Founder Testimonial">
+                                            <img src="personal/img/avatar-3.png" alt="Founder Testimonial" width="80" height="80" loading="lazy">
                                         </div>
                                         <h5 class="client-name mb-0">Amit Desai</h5>
                                         <span class="client-designation">Founder & CEO, Healthcare SaaS</span>

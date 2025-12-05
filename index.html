@@ -36,20 +36,30 @@
     <meta name="ICBM" content="12.9716, 77.5946">
     <!-- Robots -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <!-- Bundle -->
+    <!-- Critical CSS - Preload -->
+    <link rel="preload" href="vendor/css/bundle.min.css" as="style">
+    <link rel="preload" href="personal/css/style.css" as="style">
     <link href="vendor/css/bundle.min.css" rel="stylesheet">
-    <!-- Plugin Css -->
-    <link href="vendor/css/LineIcons.min.css" rel="stylesheet">
-    <link href="vendor/css/revolution-settings.min.css" rel="stylesheet">
-    <link href="vendor/css/jquery.fancybox.min.css" rel="stylesheet">
-    <link href="vendor/css/owl.carousel.min.css" rel="stylesheet">
-    <link href="vendor/css/swiper.min.css" rel="stylesheet">
-    <link href="vendor/css/cubeportfolio.min.css" rel="stylesheet">
+    <link href="personal/css/style.css" rel="stylesheet">
+    <!-- Non-critical CSS - Deferred -->
+    <link href="vendor/css/LineIcons.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="vendor/css/revolution-settings.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="vendor/css/jquery.fancybox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="vendor/css/owl.carousel.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="vendor/css/swiper.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="vendor/css/cubeportfolio.min.css" rel="stylesheet" media="print" onload="this.media='all'">
     <!-- Style Sheet -->
     <link href="personal/css/page-animation.css" rel="stylesheet">
-    <link href="personal/css/style.css" rel="stylesheet">
     <link href="personal/css/responsive-fixes.css" rel="stylesheet">
     <link href="personal/css/design-enhancements.css" rel="stylesheet">
+    <noscript>
+        <link href="vendor/css/LineIcons.min.css" rel="stylesheet">
+        <link href="vendor/css/revolution-settings.min.css" rel="stylesheet">
+        <link href="vendor/css/jquery.fancybox.min.css" rel="stylesheet">
+        <link href="vendor/css/owl.carousel.min.css" rel="stylesheet">
+        <link href="vendor/css/swiper.min.css" rel="stylesheet">
+        <link href="vendor/css/cubeportfolio.min.css" rel="stylesheet">
+    </noscript>
     
     <!-- JSON-LD Schema Markup -->
     <script type="application/ld+json">
@@ -251,7 +261,7 @@
 
         <!--Logo-->
         <a class="logo" href="index.html">
-            <h1 class="logo-text"><img src="personal/img/logo.png" alt="logo"></h1>
+            <h1 class="logo-text"><img src="personal/img/logo.png" alt="Bijay Das - AI Engineer Logo" width="150" height="50" loading="eager"></h1>
         </a>
 
         <!--Hamburger-->
@@ -327,7 +337,7 @@
     <!-- Header End -->
 
     <!-- Site Main -->
-    <div class="main-left" id="main">
+    <main class="main-left" id="main" role="main">
 
         <!-- Page changer wrapper -->
         <div class="pt-wrapper">
@@ -342,7 +352,7 @@
                             <!-- Image Area -->
                             <div class="col-lg-7 order-lg-2">
                                 <div class="slider-image">
-                                    <img src="personal/img/girl.png" alt="girl">
+                                    <img src="personal/img/girl.png" alt="Bijay Das - AI Engineer Profile" width="500" height="600" loading="eager">
                                 </div>
                             </div>
 
@@ -477,14 +487,14 @@
                                             <i class="lni-code f-icon"></i>
                                             <h5 class="title">AI/ML Engineer</h5>
                                             <p>Hands-on ML engineer building production models with TensorFlow, PyTorch, LangChain. Deployed GenAI chatbots, recommendation systems, and fraud detection—all in production.</p>
-                                            <a href="#portfolio" class="lni-arrow-right r-icon pt-trigger" data-animation="59" data-goto="7"></a>
+                                            <a href="#portfolio" class="lni-arrow-right r-icon pt-trigger" data-animation="59" data-goto="7" aria-label="View AI/ML portfolio"></a>
                                         </div>
                                         <!-- Feature Item -->
                                         <div class="feature-item">
                                             <i class="lni-layers f-icon"></i>
                                             <h5 class="title">Full-Stack Developer</h5>
                                             <p>13 years building complete applications—React/Angular frontends, Node.js/Python/Java backends, PostgreSQL/MongoDB databases. I own the entire stack.</p>
-                                            <a href="#skills" class="lni-arrow-right r-icon pt-trigger" data-animation="59" data-goto="6"></a>
+                                            <a href="#skills" class="lni-arrow-right r-icon pt-trigger" data-animation="59" data-goto="6" aria-label="View full-stack skills"></a>
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-0">
@@ -493,7 +503,7 @@
                                             <i class="lni-briefcase f-icon"></i>
                                             <h5 class="title">Architect & Team Lead</h5>
                                             <p>Designed microservices architectures for 10M+ daily users. Led teams of 5-25 engineers, delivered 50+ projects on time. AWS/Azure certified solutions architect.</p>
-                                            <a href="#experience" class="lni-arrow-right r-icon pt-trigger" data-animation="59" data-goto="4"></a>
+                                            <a href="#experience" class="lni-arrow-right r-icon pt-trigger" data-animation="59" data-goto="4" aria-label="View experience as architect and team lead"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -518,7 +528,7 @@
                                 <div class="bg-white border rounded p-4 mb-4">
                                     <h2 class="title"><span class="badge bg-success text-white">Executive MBA</span></h2> 
                                     <p class="paragraph"><strong>General Management</strong></p>
-                                    <img src="personal/img/iit.png" alt="Indian Institute of Technology Kharagpur - Executive MBA" style="height: 75px; width: 100%; object-fit: contain; margin: 15px 0;"/>
+                                    <img src="personal/img/iit.png" alt="Indian Institute of Technology Kharagpur - Executive MBA" width="200" height="75" loading="lazy" style="height: 75px; width: 100%; object-fit: contain; margin: 15px 0;"/>
                                     <p class="paragraph" style="font-size: 0.95rem; color: #666;">Strategic leadership, finance management, AI product strategy, and data-driven decision making for tech executives.</p>
                                 </div>
                             </div>
@@ -527,7 +537,7 @@
                                 <div class="bg-white border rounded p-4 mb-4">
                                     <h2 class="title"><span class="badge bg-success text-white">Master of Engineering</span></h2> 
                                     <p class="paragraph"><strong>Computer Science</strong></p>
-                                    <img src="personal/img/bits.png" alt="BITS Pilani - Masters in Computer Science" style="height: 75px; width: 100%; object-fit: contain; margin: 15px 0;"/>
+                                    <img src="personal/img/bits.png" alt="BITS Pilani - Masters in Computer Science" width="200" height="75" loading="lazy" style="height: 75px; width: 100%; object-fit: contain; margin: 15px 0;"/>
                                     <p class="paragraph" style="font-size: 0.95rem; color: #666;">Advanced algorithms, distributed systems, machine learning, and software architecture from India's top-ranked engineering institute.</p>
                                 </div>
                             </div>
@@ -536,7 +546,7 @@
                                 <div class="bg-white border rounded p-4 mb-4">
                                     <h2 class="title"><span class="badge bg-success text-white">Bachelor of Engineering</span></h2> 
                                     <p class="paragraph"><strong>Computer Science & Engineering</strong></p>
-                                    <img src="personal/img/bput.png" alt="Biju Patnaik University Of Technology" style="height: 75px; width: 100%; object-fit: contain; margin: 15px 0;"/>
+                                    <img src="personal/img/bput.png" alt="Biju Patnaik University Of Technology" width="200" height="75" loading="lazy" style="height: 75px; width: 100%; object-fit: contain; margin: 15px 0;"/>
                                     <p class="paragraph" style="font-size: 0.95rem; color: #666;">Foundation in computer science fundamentals, programming, data structures, and engineering principles.</p>
                                 </div>
                             </div>
@@ -576,7 +586,7 @@
                                             <h2 class="title" style="margin-top: 10px;"><span class="badge bg-success text-white">Lead Engineer & Architect</span></h2>
                                             <p class="paragraph"><strong>LuxLogic Technology</strong> | Software Development & Consulting</p>
                                         </div>
-                                        <img src="personal/img/lux.png" alt="LuxLogic Technology" style="height: 50px; object-fit: contain;"/>
+                                        <img src="personal/img/lux.png" alt="LuxLogic Technology" width="100" height="50" loading="lazy" style="height: 50px; object-fit: contain;"/>
                                     </div>
                                     
                                     <h6 style="margin-top: 20px; color: #667eea;"><strong>What I've Built:</strong></h6>
@@ -625,7 +635,7 @@
                                     <h2 class="title" style="margin-top: 10px;"><span class="badge bg-success text-white">Technical Educator</span></h2>
                                     <p class="paragraph"><strong>YouTube & Online Teaching</strong></p>
                                     <div style="display: flex; align-items: center; gap: 15px; margin: 15px 0;">
-                                        <img src="personal/img/youtube.png" alt="YouTube" style="height: 40px; object-fit: contain;"/>
+                                        <img src="personal/img/youtube.png" alt="YouTube Channel" width="100" height="40" loading="lazy" style="height: 40px; object-fit: contain;"/>
                                     </div>
                                     <p style="line-height: 1.8;">Create educational content on software architecture, AI/ML engineering, and cloud technologies. Teaching complex technical concepts in simple, practical terms.</p>
                                     <p style="margin-top: 10px;"><strong>Topics:</strong> System Design, Microservices, AI Implementation, Cloud Architecture</p>
@@ -848,22 +858,22 @@
                                     <h4 style="color: #667eea; margin-bottom: 20px;">🤖 AI/ML & Generative AI</h4>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Agentic AI & AI Agents<span class="float-right"><b class="count">92</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 92%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">LangGraph, AutoGen, CrewAI, Multi-Agent Systems, ReAct, Tool Calling, Function Calling, Agent Orchestration, Memory Systems, LangChain Agents</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Machine Learning & Deep Learning<span class="float-right"><b class="count">95</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 95%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">TensorFlow, PyTorch, Scikit-learn, XGBoost, LightGBM, Neural Networks, Ensemble Methods, Transfer Learning</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Generative AI & LLMs<span class="float-right"><b class="count">90</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 90%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">GPT-4, Claude, Llama, Gemini, RAG (Retrieval-Augmented Generation), LangChain, Vector Databases (Pinecone, Weaviate, ChromaDB), Prompt Engineering, Fine-tuning</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>NLP & Computer Vision<span class="float-right"><b class="count">85</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 85%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">BERT, Transformers, spaCy, NLTK, Hugging Face, OpenCV, YOLO, Semantic Search, Entity Recognition</p>
                                     </div>
                                 </div>
@@ -873,17 +883,17 @@
                                     <h4 style="color: #667eea; margin-bottom: 20px;">⚙️ MLOps & AI Infrastructure</h4>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>MLOps Platforms & Orchestration<span class="float-right"><b class="count">95</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 95%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">MLflow, Kubeflow, Airflow, Prefect, DVC, Model Versioning, Experiment Tracking, Feature Stores</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Cloud AI Services<span class="float-right"><b class="count">92</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 92%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">AWS SageMaker, Azure ML, GCP Vertex AI, Databricks, Snowflake, Model Deployment, Auto-scaling</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Containerization & Kubernetes<span class="float-right"><b class="count">90</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 90%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Docker, Kubernetes, Helm, Istio, KServe, Model Serving, GPU Orchestration, Resource Optimization</p>
                                     </div>
                                 </div>
@@ -893,17 +903,17 @@
                                     <h4 style="color: #667eea; margin-bottom: 20px;">☁️ Cloud Platforms & Architecture</h4>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>AWS (Amazon Web Services)<span class="float-right"><b class="count">95</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 95%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">EC2, EKS, Lambda, S3, RDS, DynamoDB, SageMaker, Bedrock, CloudWatch, IAM, VPC, Solutions Architect Certified</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Microsoft Azure<span class="float-right"><b class="count">88</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 88%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Azure ML, AKS, Functions, Cosmos DB, Synapse, OpenAI Service, Key Vault, AI Engineer Associate Certified</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Google Cloud Platform<span class="float-right"><b class="count">82</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 82%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Vertex AI, GKE, BigQuery, Cloud Functions, Dataflow, Professional ML Engineer Certified</p>
                                     </div>
                                 </div>
@@ -913,17 +923,17 @@
                                     <h4 style="color: #667eea; margin-bottom: 20px;">💹 Finance & Quantitative Analysis</h4>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Quantitative Finance & Risk Analytics<span class="float-right"><b class="count">88</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 88%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Credit Risk Modeling (PD/LGD/EAD), VaR, CVaR, Market Risk, Portfolio Optimization, Backtesting, Monte Carlo Simulation</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Financial AI Applications<span class="float-right"><b class="count">90</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 90%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Fraud Detection, AML/KYC, Credit Scoring, Algorithmic Trading, Real-time Risk Monitoring, Robo-Advisory</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Regulatory Technology (RegTech)<span class="float-right"><b class="count">85</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 85%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">SOX Compliance, GDPR, FINRA, OCC Guidelines, Model Risk Management (SR 11-7), Audit Trails, Data Privacy</p>
                                     </div>
                                 </div>
@@ -933,17 +943,17 @@
                                     <h4 style="color: #667eea; margin-bottom: 20px;">🛡️ AI Governance & Security</h4>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>AI Governance & Model Risk<span class="float-right"><b class="count">92</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 92%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Model Validation Frameworks, Bias Detection, Explainability (SHAP, LIME), Model Documentation, Risk Assessments</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>AI Security & Privacy<span class="float-right"><b class="count">87</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 87%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Data Encryption, Federated Learning, Differential Privacy, Secure Enclaves, PII Protection, Access Controls</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>DevSecOps<span class="float-right"><b class="count">82</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 82%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Security Scanning, Vulnerability Management, SAST/DAST, Container Security, Secret Management, Zero Trust</p>
                                     </div>
                                 </div>
@@ -953,17 +963,17 @@
                                     <h4 style="color: #667eea; margin-bottom: 20px;">🗄️ Data Engineering & Backend</h4>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Data Engineering & ETL<span class="float-right"><b class="count">93</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 93%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Spark, Kafka, Flink, Data Pipelines, Stream Processing, Data Lakes, Data Warehousing, dbt</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Databases & Storage<span class="float-right"><b class="count">90</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 90%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch, Cassandra, Snowflake, Vector DBs (Pinecone, Milvus)</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Backend Development & APIs<span class="float-right"><b class="count">95</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 95%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Python (FastAPI, Django, Flask), Java (Spring Boot), Node.js, GraphQL, REST APIs, Microservices, gRPC</p>
                                     </div>
                                 </div>
@@ -973,17 +983,17 @@
                                     <h4 style="color: #667eea; margin-bottom: 20px;">👥 Engineering Leadership & Strategy</h4>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Technical Leadership & Team Management<span class="float-right"><b class="count">92</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 92%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Led teams 5–120 engineers, Hiring & Talent Strategy, Performance Management, Agile/Scrum, Remote Leadership</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>AI Product Strategy & Roadmapping<span class="float-right"><b class="count">88</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 88%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">AI Roadmap Design, OKRs, Stakeholder Management, Business Case Development, ROI Analysis, Executive Coaching</p>
                                     </div>
                                     <div class="progress-item" style="margin-bottom: 15px;">
                                         <h6>Cross-Functional Collaboration & DEI<span class="float-right"><b class="count">90</b>%</span></h6>
-                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></span></div>
+                                        <div class="progress"><span class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Skill proficiency: 90%"></span></div>
                                         <p style="font-size: 0.9rem; margin-top: 8px; color: #666;">Product/Engineering/Business Alignment, DEI Initiatives, Mentorship Programs, Change Management</p>
                                     </div>
                                 </div>
@@ -1181,111 +1191,111 @@
                                 <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
 
                                     <!-- Item -->
-                                    <div class="cbp-item"><a href="personal/img/skills/1.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/1.png" alt="1"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/2.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/2.png" alt="2"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/3.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/3.png" alt="3"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/4.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/4.png" alt="4"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/5.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/5.png" alt="5"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/6.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/6.png" alt="6"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/7.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/7.png" alt="7"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/8.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/8.png" alt="8"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/9.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/9.png" alt="9"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/10.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/10.png" alt="10"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/11.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/11.png" alt="11"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/12.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/12.png" alt="12"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/13.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/13.png" alt="13"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/14.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/14.png" alt="14"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/15.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/15.png" alt="15"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/16.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/16.png" alt="16"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/17.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/17.png" alt="17"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/18.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/18.png" alt="18"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/19.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/19.png" alt="19"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/20.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/20.png" alt="20"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/21.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/21.png" alt="21"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/22.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/22.png" alt="22"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/23.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/23.png" alt="23"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/24.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/24.png" alt="24"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/25.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/25.png" alt="25"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/26.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/26.png" alt="26"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/27.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/27.png" alt="27"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/28.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/28.png" alt="28"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/29.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/29.png" alt="29"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/30.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/30.png" alt="30"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/31.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/31.png" alt="31"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/32.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/32.png" alt="32"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/33.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/33.png" alt="33"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/34.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/34.png" alt="34"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/35.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/35.png" alt="35"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/36.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/36.png" alt="36"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/37.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/37.png" alt="37"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/38.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/38.png" alt="38"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/39.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/39.png" alt="39"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/40.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/40.png" alt="40"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/41.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/41.png" alt="41"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/42.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/42.png" alt="42"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/43.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/43.png" alt="43"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/44.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/44.png" alt="44"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/45.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/45.png" alt="45"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/46.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/46.png" alt="46"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/47.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/47.png" alt="47"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/48.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/48.png" alt="48"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/49.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/49.png" alt="49"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/50.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/50.png" alt="50"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/51.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/51.png" alt="51"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/52.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/52.png" alt="52"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/53.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/53.png" alt="53"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/54.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/54.png" alt="54"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/55.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/55.png" alt="55"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/56.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/56.png" alt="56"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/57.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/57.png" alt="57"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/58.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/58.png" alt="58"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/59.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/59.png" alt="59"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/60.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/60.png" alt="60"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/61.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/61.png" alt="61"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/62.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/62.png" alt="62"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/63.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/63.png" alt="63"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/64.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/64.png" alt="64"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/65.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/65.png" alt="65"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/66.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/66.png" alt="66"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/67.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/67.png" alt="67"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/68.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/68.png" alt="68"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/69.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/69.png" alt="69"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/70.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/70.png" alt="70"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/71.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/71.png" alt="71"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/72.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/72.png" alt="72"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/73.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/73.png" alt="73"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/74.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/74.png" alt="74"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/75.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/75.png" alt="75"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/76.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/76.png" alt="76"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/77.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/77.png" alt="77"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/78.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/78.png" alt="78"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/79.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/79.png" alt="79"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/80.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/80.png" alt="80"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/81.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/81.png" alt="81"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/82.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/82.png" alt="82"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/83.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/83.png" alt="83"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/84.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/84.png" alt="84"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/85.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/85.png" alt="85"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/86.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/86.png" alt="86"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/87.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/87.png" alt="87"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/88.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/88.png" alt="88"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/89.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/89.png" alt="89"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/90.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/90.png" alt="90"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/91.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/91.png" alt="91"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/92.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/92.png" alt="92"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/93.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/93.png" alt="93"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/94.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/94.png" alt="94"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/95.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/95.png" alt="95"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/96.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/96.png" alt="96"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/97.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/97.png" alt="97"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/98.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/98.png" alt="98"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/99.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/99.png" alt="99"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/100.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/100.png" alt="100"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/101.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/101.png" alt="101"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/102.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/102.png" alt="102"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/103.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/103.png" alt="103"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/104.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/104.png" alt="104"></a></div>
-                                    <div class="cbp-item"><a href="personal/img/skills/105.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/105.png" alt="105"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/1.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/1.png" alt="Technical skill 1" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/2.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/2.png" alt="Technical skill 2" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/3.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/3.png" alt="Technical skill 3" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/4.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/4.png" alt="Technical skill 4" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/5.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/5.png" alt="Technical skill 5" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/6.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/6.png" alt="Technical skill 6" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/7.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/7.png" alt="Technical skill 7" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/8.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/8.png" alt="Technical skill 8" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/9.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/9.png" alt="Technical skill 9" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/10.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/10.png" alt="Technical skill 10" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/11.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/11.png" alt="Technical skill 11" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/12.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/12.png" alt="Technical skill 12" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/13.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/13.png" alt="Technical skill 13" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/14.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/14.png" alt="Technical skill 14" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/15.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/15.png" alt="Technical skill 15" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/16.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/16.png" alt="Technical skill 16" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/17.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/17.png" alt="Technical skill 17" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/18.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/18.png" alt="Technical skill 18" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/19.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/19.png" alt="Technical skill 19" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/20.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/20.png" alt="Technical skill 20" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/21.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/21.png" alt="Technical skill 21" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/22.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/22.png" alt="Technical skill 22" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/23.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/23.png" alt="Technical skill 23" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/24.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/24.png" alt="Technical skill 24" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/25.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/25.png" alt="Technical skill 25" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/26.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/26.png" alt="Technical skill 26" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/27.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/27.png" alt="Technical skill 27" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/28.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/28.png" alt="Technical skill 28" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/29.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/29.png" alt="Technical skill 29" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/30.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/30.png" alt="Technical skill 30" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/31.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/31.png" alt="Technical skill 31" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/32.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/32.png" alt="Technical skill 32" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/33.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/33.png" alt="Technical skill 33" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/34.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/34.png" alt="Technical skill 34" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/35.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/35.png" alt="Technical skill 35" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/36.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/36.png" alt="Technical skill 36" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/37.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/37.png" alt="Technical skill 37" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/38.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/38.png" alt="Technical skill 38" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/39.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/39.png" alt="Technical skill 39" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/40.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/40.png" alt="Technical skill 40" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/41.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/41.png" alt="Technical skill 41" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/42.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/42.png" alt="Technical skill 42" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/43.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/43.png" alt="Technical skill 43" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/44.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/44.png" alt="Technical skill 44" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/45.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/45.png" alt="Technical skill 45" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/46.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/46.png" alt="Technical skill 46" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/47.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/47.png" alt="Technical skill 47" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/48.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/48.png" alt="Technical skill 48" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/49.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/49.png" alt="Technical skill 49" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/50.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/50.png" alt="Technical skill 50" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/51.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/51.png" alt="Technical skill 51" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/52.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/52.png" alt="Technical skill 52" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/53.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/53.png" alt="Technical skill 53" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/54.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/54.png" alt="Technical skill 54" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/55.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/55.png" alt="Technical skill 55" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/56.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/56.png" alt="Technical skill 56" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/57.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/57.png" alt="Technical skill 57" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/58.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/58.png" alt="Technical skill 58" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/59.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/59.png" alt="Technical skill 59" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/60.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/60.png" alt="Technical skill 60" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/61.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/61.png" alt="Technical skill 61" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/62.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/62.png" alt="Technical skill 62" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/63.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/63.png" alt="Technical skill 63" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/64.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/64.png" alt="Technical skill 64" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/65.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/65.png" alt="Technical skill 65" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/66.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/66.png" alt="Technical skill 66" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/67.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/67.png" alt="Technical skill 67" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/68.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/68.png" alt="Technical skill 68" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/69.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/69.png" alt="Technical skill 69" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/70.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/70.png" alt="Technical skill 70" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/71.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/71.png" alt="Technical skill 71" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/72.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/72.png" alt="Technical skill 72" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/73.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/73.png" alt="Technical skill 73" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/74.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/74.png" alt="Technical skill 74" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/75.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/75.png" alt="Technical skill 75" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/76.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/76.png" alt="Technical skill 76" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/77.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/77.png" alt="Technical skill 77" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/78.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/78.png" alt="Technical skill 78" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/79.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/79.png" alt="Technical skill 79" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/80.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/80.png" alt="Technical skill 80" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/81.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/81.png" alt="Technical skill 81" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/82.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/82.png" alt="Technical skill 82" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/83.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/83.png" alt="Technical skill 83" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/84.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/84.png" alt="Technical skill 84" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/85.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/85.png" alt="Technical skill 85" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/86.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/86.png" alt="Technical skill 86" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/87.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/87.png" alt="Technical skill 87" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/88.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/88.png" alt="Technical skill 88" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/89.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/89.png" alt="Technical skill 89" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/90.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/90.png" alt="Technical skill 90" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/91.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/91.png" alt="Technical skill 91" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/92.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/92.png" alt="Technical skill 92" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/93.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/93.png" alt="Technical skill 93" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/94.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/94.png" alt="Technical skill 94" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/95.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/95.png" alt="Technical skill 95" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/96.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/96.png" alt="Technical skill 96" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/97.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/97.png" alt="Technical skill 97" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/98.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/98.png" alt="Technical skill 98" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/99.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/99.png" alt="Technical skill 99" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/100.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/100.png" alt="Technical skill 100" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/101.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/101.png" alt="Technical skill 101" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/102.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/102.png" alt="Technical skill 102" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/103.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/103.png" alt="Technical skill 103" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/104.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/104.png" alt="Technical skill 104" width="100" height="100" loading="lazy"></a></div>
+                                    <div class="cbp-item"><a href="personal/img/skills/105.png" class="cbp-caption cbp-lightbox"><img src="personal/img/skills/105.png" alt="Technical skill 105" width="100" height="100" loading="lazy"></a></div>
                                                                 
                                 </div>
                             </div>
@@ -1489,38 +1499,38 @@
 
         </div>
 
-    </div>
+    </main>
     <!-- Site Main End -->
 
 
-    <!-- JavaScript -->
+    <!-- JavaScript - Core (required) -->
     <script src="vendor/js/bundle.min.js"></script>
-    <!-- Plugin Js -->
-    <script src="vendor/js/jquery.appear.js"></script>
-    <script src="vendor/js/jquery.fancybox.min.js"></script>
-    <script src="vendor/js/owl.carousel.min.js"></script>
-    <script src="vendor/js/TweenMax.min.js"></script>
-    <script src="vendor/js/jquery.cubeportfolio.min.js"></script>
-    <!-- REVOLUTION JS FILES -->
-    <script src="vendor/js/jquery.themepunch.tools.min.js"></script>
-    <script src="vendor/js/jquery.themepunch.revolution.min.js"></script>
-    <!-- SLIDER REVOLUTION EXTENSIONS -->
-    <script src="vendor/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="vendor/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="vendor/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="vendor/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="vendor/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="vendor/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="vendor/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="vendor/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="vendor/js/extensions/revolution.extension.video.min.js"></script>
-    <!-- google map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=xxxxx"></script>
-    <script src="personal/js/map.js"></script>
+    <!-- Plugin Js - Deferred for performance -->
+    <script src="vendor/js/jquery.appear.js" defer></script>
+    <script src="vendor/js/jquery.fancybox.min.js" defer></script>
+    <script src="vendor/js/owl.carousel.min.js" defer></script>
+    <script src="vendor/js/TweenMax.min.js" defer></script>
+    <script src="vendor/js/jquery.cubeportfolio.min.js" defer></script>
+    <!-- REVOLUTION JS FILES - Deferred -->
+    <script src="vendor/js/jquery.themepunch.tools.min.js" defer></script>
+    <script src="vendor/js/jquery.themepunch.revolution.min.js" defer></script>
+    <!-- SLIDER REVOLUTION EXTENSIONS - Deferred -->
+    <script src="vendor/js/extensions/revolution.extension.actions.min.js" defer></script>
+    <script src="vendor/js/extensions/revolution.extension.carousel.min.js" defer></script>
+    <script src="vendor/js/extensions/revolution.extension.kenburn.min.js" defer></script>
+    <script src="vendor/js/extensions/revolution.extension.layeranimation.min.js" defer></script>
+    <script src="vendor/js/extensions/revolution.extension.migration.min.js" defer></script>
+    <script src="vendor/js/extensions/revolution.extension.navigation.min.js" defer></script>
+    <script src="vendor/js/extensions/revolution.extension.parallax.min.js" defer></script>
+    <script src="vendor/js/extensions/revolution.extension.slideanims.min.js" defer></script>
+    <script src="vendor/js/extensions/revolution.extension.video.min.js" defer></script>
+    <!-- google map - Deferred -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=xxxxx" defer></script>
+    <script src="personal/js/map.js" defer></script>
     <!-- custom script -->
-    <script src="personal/js/page-transition.js"></script>
-    <script src="vendor/js/contact_us.js"></script>
-    <script src="personal/js/script.js"></script>
+    <script src="personal/js/page-transition.js" defer></script>
+    <script src="vendor/js/contact_us.js" defer></script>
+    <script src="personal/js/script.js" defer></script>
     <style>
         .cbp-item {
             width: unset!important;

@@ -33,12 +33,10 @@
 
 
 /* ===================================
-    Google font
+    Google font - Loaded from HTML for performance
 ====================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
+/* Fonts are now loaded via <link> in HTML head for better performance */
 
 .main-font{font-family: 'Roboto', sans-serif;}
 .alt-font{font-family: 'Poppins', sans-serif;}
